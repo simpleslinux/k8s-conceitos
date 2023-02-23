@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: teste-app-service
+spec:
+  type: ClusterIP
+  selector:
+    run: teste-app
+  ports:
+    - protocol: TCP
+      port: 6377
+      targetPort: 6377

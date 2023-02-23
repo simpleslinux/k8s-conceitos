@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: teste-app-deployment
+spec:
+  replicas: 3 # Defina o número de réplicas desejado
+  selector:
+    matchLabels:
+      run: teste-app
+  template:
+    metadata:
+      labels:
+        run: teste-app
+    spec:
+      containers:
+        - image: fmnapoli/teste-app
+          name: teste-app
+          resources: {}
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
