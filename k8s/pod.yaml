@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: teste-app
+spec:
+  containers:
+    - name: teste-app
+      image: fmnapoli/teste-app
+      ports:
+        - containerPort: 6377
