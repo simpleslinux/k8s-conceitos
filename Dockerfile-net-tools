@@ -1,0 +1,22 @@
+FROM alpine:3.17.2
+
+RUN apk update && \
+    apk upgrade && \
+    apk --no-cache add \
+    bash \
+    bind-tools \
+    curl \
+    iputils \
+    jq \
+    nano \
+    net-tools \
+    netcat-openbsd \
+    nmap \  
+    nmap-ncat \ 
+    nmap-scripts \ 
+    openssh-client \
+    openssl \
+    speedtest-cli \
+    sshfs \
+    tcpdump \
+    && rm -rf /var/cache/apk/*
