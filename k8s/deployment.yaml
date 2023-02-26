@@ -13,7 +13,7 @@ spec:
         run: teste-app
     spec:
       containers:
-        - image: fmnapoli/teste-app
+        - image: fmnapoli/teste-app:1.0.0
           name: teste-app
           resources: {}
       dnsPolicy: ClusterFirst

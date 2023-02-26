@@ -8,5 +8,5 @@ spec:
     run: teste-app
   ports:
     - protocol: TCP
-      port: 6377
-      targetPort: 6377
+      port: 5000
+      targetPort: 5000
