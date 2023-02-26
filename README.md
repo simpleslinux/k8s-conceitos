@@ -40,7 +40,7 @@ Create Cluster - Windows
 
 ```
 $env:KUBECONFIG=$("$env:USERPROFILE\.kube\config-k8s-lab")
-k3d cluster create k8s-lab --agents 2 --port "6377:80@loadbalancer"
+k3d cluster create k8s-lab --agents 2 --port "80:80@loadbalancer"
 
 . $profile
 ```
@@ -49,7 +49,7 @@ Create Cluster - Linux
 
 ```
 KUBECONFIG="$HOME/.kube/config-k8s-lab"
-k3d cluster create k8s-lab --agents 2 --port "6377:80@loadbalancer"
+k3d cluster create k8s-lab --agents 2 --port "80:80@loadbalancer"
 
 source ~/.zshrc
 ```

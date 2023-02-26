@@ -1,7 +1,7 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
-  name: teste-app-rs
+  name: teste-app-deployment
 spec:
   replicas: 3 # Defina o número de réplicas desejado
   selector:
@@ -13,7 +13,7 @@ spec:
         run: teste-app
     spec:
       containers:
-        - image: fmnapoli/teste-app
+        - image: fmnapoli/teste-app:2.0.0
           name: teste-app
           resources: {}
       dnsPolicy: ClusterFirst
