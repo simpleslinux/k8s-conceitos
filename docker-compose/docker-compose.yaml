@@ -1,6 +1,9 @@
 version: '3'
 services:
   web:
-    image: fmnapoli/teste-app
+    image: fmnapoli/teste-app:1.0.0
     ports:
-      - "6377:6377"
+      - "80:5000"
+    environment:
+      - TITULO=K8S Conceitos
+      - MENSAGEM=Atenção ao nome do Host!
