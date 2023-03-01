@@ -92,42 +92,83 @@ Criando um POD
 ```bash
 kubectl run  teste-app  --image=fmnapoli/teste-app
 ```
+
+Criando um POD passando ENV
+```bash
+kubectl run  teste-app  --image=fmnapoli/teste-app --env TITULO="K8S POD" --env MENSAGEM="Testando POD"
+```
+
+Acessando via encaminhamento de portas
+
+```bash
+kubectl port-forward pod/teste-app 5000:5000
+```
+No navegador: http://localhost:5000
+
 Removendo um POD
 ```bash
 kubectl delete pod teste-app
 ```
 
 ```bash
-kubectlrun teste-app --image=fmnapoli/teste-app --dry-run=client -o yaml > pod.yaml
+kubectl run teste-app --image=fmnapoli/teste-app --dry-run=client -o yaml > pod.yaml
 ```
 
 ```bash
-kubectl apply -f pod.yaml
+kubectl create -f pod.yaml
 ```
 
 ```bash
-kubectl port-forward pods/teste-app 7777:5000
+kubectl port-forward pod/teste-app 5000:5000
 ```
+No navegador: http://localhost:5000
+
+Apagando o POD
 
 ```bash
 kubectl delete -f pod.yaml
 ```
 
 ```bash
-kubectl apply -f replicaset.yaml
+kubectl apply -f replicaset-v1.yaml
+```
+```bash
+kubectl get rs
+```
+```bash
+kubectl delete -f replicaset-v1.yaml
 ```
 
 ```bash
-kubectl delete -f replicaset.yaml
+kubectl apply -f replicaset-v2.yaml
 ```
 
 ```bash
-kubectl apply -f deployment.yaml
+kubectl delete -f replicaset-v2.yaml
 ```
 
 ```bash
-kubectl expose deployment teste-app-deployment  --port=80 --target-port=6377 --dry-run=client -o yaml
+kubectl apply -f deployment-v1.yaml
 ```
+
+```bash
+kubectl get deployment
+```
+
+```bash
+kubectl apply -f deployment-v2.yaml
+```
+
+```bash
+kubectl get deployment
+```
+```bash
+kubectl rollout undo deployment teste-app-deployment
+```
+```bash
+kubectl delete -f deployment-v2.yaml
+```
+
 
 ```bash
 kubectl apply -f service.yaml
