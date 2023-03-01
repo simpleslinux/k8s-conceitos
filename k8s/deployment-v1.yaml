@@ -15,6 +15,11 @@ spec:
       containers:
         - image: fmnapoli/teste-app:1.0.0
           name: teste-app
+          env:
+            - name: TITULO
+              value: "K8S Deployment"
+            - name: MENSAGEM
+              value: "Testando Deployment 1"
           resources: {}
       dnsPolicy: ClusterFirst
       restartPolicy: Always
