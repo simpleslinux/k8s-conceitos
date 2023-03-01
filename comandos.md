@@ -90,7 +90,7 @@ kubectl get nodes
 
 Criando um POD
 ```bash
-kubectl deploy create  teste-app  --image=fmnapoli/teste-app
+kubectl run  teste-app  --image=fmnapoli/teste-app
 ```
 Removendo um POD
 ```bash
