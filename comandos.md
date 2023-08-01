@@ -1,5 +1,20 @@
 # Containers
 
+Executando um container
+```bash
+docker run -p 6378:80 nginx
+```
+
+Executando um container e removendo ao final
+```bash
+docker run --rm -p 6378:80 nginx
+```
+
+Executando um container em background
+```bash
+docker run -d -p 6378:80 nginx
+```
+
 Listando containers em execução
 ```bash
 docker container ls
@@ -8,6 +23,12 @@ Listando todos os containers
 ```bash
 docker container ls -a
 ```
+
+Executando um container e removendo ao final
+```bash
+docker run --rm -p 6378:80 nginx
+```
+
 Construindo uma Imagem
 ```bash
 docker build -t teste-app .
