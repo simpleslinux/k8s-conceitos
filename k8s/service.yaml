@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: teste-app-service
 spec:
-  #type: ClusterIP
+  type: ClusterIP
   #type: NodePort
-  type: LoadBalancer
+  #type: LoadBalancer
   selector:
     run: teste-app
   ports:
