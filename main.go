@@ -92,8 +92,8 @@ func index() http.Handler {
 			appTitulo = "K8S Conceito"
 		}
 
-		hostname,_ := os.Hostname()
-		appVersion := "2.0.0"
+		hostname, _ := os.Hostname()
+		appVersion := "3.0.0"
 		appTitulo = appTitulo + " - " + appVersion
 
 		html := `<!DOCTYPE html><html lang="pt_BR" dir="ltr"><head><style>@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap);*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}::selection{color:#000;background:#fff}nav{position:fixed;background:#1b1b1b;width:100%;padding:10px 0;z-index:12}nav .menu{max-width:1250px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:0 20px}.menu .logo a{text-decoration:none;color:#fff;font-size:35px;font-weight:600}.menu ul{display:inline-flex}.img{width:100%;height:100vh;background-size:cover;background-position:center;position:relative}.img::before{content:'';position:absolute;height:100%;width:100%;background:rgba(0,0,0,.8)}.center{position:absolute;top:52%;left:50%;transform:translate(-50%,-50%);width:100%;padding:0 20px;text-align:center}.center .title{color:#fff;font-size:55px;font-weight:600}.center .sub_title{color:#fff;font-size:52px;font-weight:600}</style><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Website | ` + appTitulo + `</title></head><body><nav><div class="menu"><div class="logo"><a href="#">` + appTitulo + `</a></div></div></nav><div class="img"></div><div class="center"><div class="title">` + msg + `</div><div class="sub_title">Host: ` + hostname + `</div></div></body></html>`
