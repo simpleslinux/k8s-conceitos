@@ -2,13 +2,14 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    run: teste-app
+    app: teste-app
   name: teste-app
 spec:
   containers:
-    - image: fmnapoli/teste-app:1.0.0
-      name: teste-app
-      resources: {}
-  dnsPolicy: ClusterFirst
-  restartPolicy: Always
-status: {}
+  - env:
+    - name: TITULO
+      value: K8S POD
+    - name: MENSAGEM
+      value: Testando POD
+    image: fmnapoli/teste-app:3.0.0
+    name: teste-app
