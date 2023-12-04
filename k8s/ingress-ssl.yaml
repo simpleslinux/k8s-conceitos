@@ -5,6 +5,8 @@ metadata:
   annotations:
     external-dns.alpha.kubernetes.io/hostname: testapp.fabrizio.nostromo.tcloud-devops.cloudtotvs.com.br.
     kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"    
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
   rules:
     - host: testapp.fabrizio.nostromo.tcloud-devops.cloudtotvs.com.br
@@ -16,4 +18,8 @@ spec:
               service:
                 name: teste-app-service
                 port:
-                  number: 5000            
+                  number: 5000
+  tls:
+  - hosts:
+    - testapp.fabrizio.nostromo.tcloud-devops.cloudtotvs.com.br
+    secretName: testapp-secret-prod                  
