@@ -20,4 +20,5 @@ RUN apk update && \
     sshfs \
     tcpdump \
     elinks \
+    mtr \
     && rm -rf /var/cache/apk/*
