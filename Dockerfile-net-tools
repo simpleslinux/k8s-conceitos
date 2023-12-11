@@ -21,4 +21,5 @@ RUN apk update && \
     tcpdump \
     elinks \
     mtr \
+    htop \
     && rm -rf /var/cache/apk/*
