@@ -1,0 +1,139 @@
+SPDXVersion: SPDX-2.3
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: SBOM-SPDX-4e5333f5-ad88-4e5b-8366-0a25b2f883f2
+DocumentNamespace: https://spdx.org/spdxdocs/k8s-releng-bom-1e4f9a85-8247-4b39-bc21-19bb836b6810
+Creator: Organization: Kubernetes Release Engineering
+Creator: Tool: bom-v0.5.1
+LicenseListVersion: 3.20
+Created: 2023-12-12T21:12:40Z
+
+
+##### Package: sha256:f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b
+
+PackageName: sha256:f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b
+SPDXID: SPDXRef-Package-sha256-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b
+PackageChecksum: SHA256: f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+ExternalRef: PACKAGE-MANAGER purl pkg:oci/teste-app@sha256:f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b?arch=amd64&mediaType=application%2Fvnd.docker.distribution.manifest.v2+json&os=linux&repository_url=index.docker.io%2Ffmnapoli
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+
+##### Package: sha256:79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df
+
+PackageName: sha256:79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df
+SPDXID: SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df
+PackageChecksum: SHA1: 6fde4858ae4db656ec34f06ce4e5ea0afa172b1d
+PackageChecksum: SHA256: 79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df
+PackageChecksum: SHA512: 049ed2c284ff5ade1c1753a5856db6879da0b715a5de4ac2420b7b3ab7e420946c6d4f5f96d680d320c8ae19f8935fc53168368ca8a84a6ddb464a8ed462112d
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageFileName: 79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df.tar.gz
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+
+##### Package: alpine-baselayout-data
+
+PackageName: alpine-baselayout-data
+SPDXID: SPDXRef-Package-SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df-4a6dae4a-0372-447a-a2b0-5683feeeedfe
+PackageChecksum: SHA1: 113adae7afdfa521510d13f2795675a69658c845
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageSupplier: Person: Natanael Copa <ncopa@alpinelinux.org>
+PackageLicenseConcluded: NOASSERTION
+PackageVersion: 3.4.3-r2
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/alpine-baselayout-data@3.4.3-r2?arch=noarch
+PackageLicenseDeclared: GPL-2.0-only
+PackageCopyrightText: NOASSERTION
+
+
+Relationship: SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df CONTAINS SPDXRef-Package-SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df-4a6dae4a-0372-447a-a2b0-5683feeeedfe
+##### Package: alpine-keys
+
+PackageName: alpine-keys
+SPDXID: SPDXRef-Package-SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df-321f26e6-57c8-44fb-8f8d-e15a842a9988
+PackageChecksum: SHA1: 903176b2d2a8ddefd1ba6940f19ad17c2c1d4aff
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageSupplier: Person: Natanael Copa <ncopa@alpinelinux.org>
+PackageLicenseConcluded: NOASSERTION
+PackageVersion: 2.4-r1
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/alpine-keys@2.4-r1?arch=x86_64
+PackageLicenseDeclared: MIT
+PackageCopyrightText: NOASSERTION
+
+
+Relationship: SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df CONTAINS SPDXRef-Package-SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df-321f26e6-57c8-44fb-8f8d-e15a842a9988
+##### Package: alpine-release
+
+PackageName: alpine-release
+SPDXID: SPDXRef-Package-SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df-42bc49d9-dcc3-4b86-aecc-74ac2cdb75e8
+PackageChecksum: SHA1: 571389ecad9595658871b2b13a5b517a4e8ec886
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageSupplier: Person: Natanael Copa <ncopa@alpinelinux.org>
+PackageLicenseConcluded: NOASSERTION
+PackageVersion: 3.19.0-r0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/alpine-release@3.19.0-r0?arch=noarch
+PackageLicenseDeclared: MIT
+PackageCopyrightText: NOASSERTION
+
+
+Relationship: SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df CONTAINS SPDXRef-Package-SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df-42bc49d9-dcc3-4b86-aecc-74ac2cdb75e8
+##### Package: ca-certificates-bundle
+
+PackageName: ca-certificates-bundle
+SPDXID: SPDXRef-Package-SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df-81364d46-09f8-4c47-94b1-a181d35994e4
+PackageChecksum: SHA1: 47f485d08670a9eb21ebf10e70ae65dc43ab6c3d
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageSupplier: Person: Natanael Copa <ncopa@alpinelinux.org>
+PackageLicenseConcluded: NOASSERTION
+PackageVersion: 20230506-r0
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/ca-certificates-bundle@20230506-r0?arch=x86_64
+PackageLicenseDeclared: MPL-2.0 AND MIT
+PackageCopyrightText: NOASSERTION
+
+
+Relationship: SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df CONTAINS SPDXRef-Package-SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df-81364d46-09f8-4c47-94b1-a181d35994e4
+##### Package: tzdata
+
+PackageName: tzdata
+SPDXID: SPDXRef-Package-SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df-e35d67de-a8d4-46c7-8771-a7947355d0d2
+PackageChecksum: SHA1: fbc809dfba799555ed715d32b4724c7b9161941c
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageSupplier: Person: Natanael Copa <ncopa@alpinelinux.org>
+PackageLicenseConcluded: NOASSERTION
+PackageVersion: 2023c-r1
+ExternalRef: PACKAGE-MANAGER purl pkg:apk/alpine/tzdata@2023c-r1?arch=x86_64
+PackageLicenseDeclared: Public-Domain
+PackageCopyrightText: NOASSERTION
+
+
+Relationship: SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df CONTAINS SPDXRef-Package-SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df-e35d67de-a8d4-46c7-8771-a7947355d0d2
+
+Relationship: SPDXRef-Package-sha256-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b CONTAINS SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-79634e1a8d1f7ae924af9eec002d16f74476ee4cf333a50d5967c279e79d44df
+##### Package: sha256:5f2638fb370e2de04c8998b6c06947baafd837b6411cb45ffd51b6c333a8bc80
+
+PackageName: sha256:5f2638fb370e2de04c8998b6c06947baafd837b6411cb45ffd51b6c333a8bc80
+SPDXID: SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-5f2638fb370e2de04c8998b6c06947baafd837b6411cb45ffd51b6c333a8bc80
+PackageChecksum: SHA1: b5e0b40995e4e5375f99808dbc4ba280d041aee7
+PackageChecksum: SHA256: 5f2638fb370e2de04c8998b6c06947baafd837b6411cb45ffd51b6c333a8bc80
+PackageChecksum: SHA512: dc1d60b4d89e9b56749ebe561eb2e82034084cd2597b20344453c13e3f5bee5abbd702483b63cc478bfb1d2b16706856c68b27adb76dee31739f4bc2321684d5
+PackageDownloadLocation: NONE
+FilesAnalyzed: false
+PackageLicenseConcluded: NOASSERTION
+PackageFileName: 5f2638fb370e2de04c8998b6c06947baafd837b6411cb45ffd51b6c333a8bc80.tar.gz
+PackageLicenseDeclared: NOASSERTION
+PackageCopyrightText: NOASSERTION
+
+
+Relationship: SPDXRef-Package-sha256-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b CONTAINS SPDXRef-Package-index.docker.io-fmnapoli-teste-app-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b-sha256-5f2638fb370e2de04c8998b6c06947baafd837b6411cb45ffd51b6c333a8bc80
+
+Relationship: SPDXRef-DOCUMENT DESCRIBES SPDXRef-Package-sha256-f6e85eae5f523f2054e5040d40982ee4a31232bceb8eedce2c591a40967ac76b
+
+
