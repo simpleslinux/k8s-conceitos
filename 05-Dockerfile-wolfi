@@ -1,0 +1,17 @@
+# Estágio de compilação
+FROM cgr.dev/chainguard/go AS build
+
+WORKDIR /app
+
+COPY main.go .
+COPY go.mod .
+
+RUN go build -o app  && chown -R nonroot.nonroot /app/
+
+# Estágio de produção
+FROM cgr.dev/chainguard/wolfi-base
+USER nonroot
+WORKDIR /app
+COPY --from=build /app/app .
+EXPOSE 5000
+CMD ["./app"]
