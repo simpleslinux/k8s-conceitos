@@ -20,6 +20,11 @@ Depois setar como padrão
 wsl --set-default-version 2
 ```
 
+## Instalar Ubuntu
+
+https://apps.microsoft.com/detail/9PN20MSR04DW?hl=pt-br&gl=BR
+
+
 ## Instalar o Rancher Desktop
 
 https://rancherdesktop.io/
