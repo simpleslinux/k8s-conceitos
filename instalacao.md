@@ -1,31 +1,3 @@
-# Instalar k3d no Windows / Linux
-
-## Instalar WSL
-
-```powershell
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-```
-
-Reiniciar
-
-Instalar WSL2 Kernel update
-
-https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
-
-
-Depois setar como padrão
-
-```powershell
-wsl --set-default-version 2
-```
-
-## Instalar o Rancher Desktop
-
-https://rancherdesktop.io/
-
-E usar o Docker como container runtime
-
 ## Instalando o K3D Windows
 
 Powehshell como Adm

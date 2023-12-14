@@ -1,55 +1,34 @@
-# Kubernetes
+# Preparar Windows
 
+## Instalar WSL
 
-# Dica
-
-Usar k9s ( https://k9scli.io/ )
-
-
-
-Windows
-
-Acrescentar no $profile
-```
-New-Alias k kubectl.exe
-$env:KUBECONFIG=$(Get-ChildItem -Path "$env:USERPROFILE\.kube\config*").FullName -join ";"
+```powershell
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-Linux 
+Reiniciar
 
-Install k3d
-```
-wget -q -O - https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
-```
+Instalar WSL2 Kernel update
 
-Acrescentar no  ~/.zshrc
-```
-alias k="kubectl"
-alias ns="kubens"
-alias ctx="kubectx"
+https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
-source <(kubectl completion zsh)
-export KUBECONFIG=$(for i in $(find $HOME/.kube/ -iname 'config*') ; do echo -n ":$i"; done | cut -c 2-)
 
+Depois setar como padrão
+
+```powershell
+wsl --set-default-version 2
 ```
 
+## Instalar o Rancher Desktop
 
-# Criação do Cluster
+https://rancherdesktop.io/
 
-Create Cluster - Windows
+E usar o Docker como container runtime
 
-```
-$env:KUBECONFIG=$("$env:USERPROFILE\.kube\config-k8s-lab")
-k3d cluster create k8s-lab --agents 2 --port "80:80@loadbalancer"
+## Instalar Windows Terminal
 
-. $profile
-```
+https://aka.ms/terminal
 
-Create Cluster - Linux
 
-```
-KUBECONFIG="$HOME/.kube/config-k8s-lab"
-k3d cluster create k8s-lab --agents 2 --port "80:80@loadbalancer"
 
-source ~/.zshrc
-```
